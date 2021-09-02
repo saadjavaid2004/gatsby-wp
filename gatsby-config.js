@@ -7,12 +7,12 @@
  */
 
 module.exports = {
-  /**
-   * Adding plugins to this array adds them to your Gatsby site.
-   *
-   * Gatsby has a rich ecosystem of plugins.
-   * If you need any more you can search here: https://www.gatsbyjs.com/plugins/
-   */
+  siteMetadata: {
+    title: `Gatsby WordPress Tutorial`,
+    description: `An example to learn how to source data from WordPress.`,
+    author: `@saadjavaid`,
+    siteUrl: `https://mysite.com`,
+  },
   plugins: [
     {
       /**
@@ -28,7 +28,8 @@ module.exports = {
         // the only required plugin option for WordPress is the GraphQL url.
         url:
           process.env.WPGRAPHQL_URL ||
-          `https://wpgatsbydemo.wpengine.com/graphql`,
+		 `http://gatsby-wordpress.local/graphql`,
+          //`https://wpgatsbydemo.wpengine.com/graphql`,
       },
     },
 
@@ -58,13 +59,13 @@ module.exports = {
       // See https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/?=gatsby-plugin-manifest
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter WordPress Blog`,
-        short_name: `GatsbyJS & WP`,
+        name: `Gatsby WordPress`,
+        short_name: `Gatsby WordPress`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#262E6D`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/icon.png`, // This path is relative to the root of the site.
       },
     },
 
@@ -75,6 +76,7 @@ module.exports = {
      * this (optional) plugin enables Progressive Web App + Offline functionality
      * To learn more, visit: https://gatsby.dev/offline
      */
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
+	"gatsby-plugin-image",
   ],
 }
