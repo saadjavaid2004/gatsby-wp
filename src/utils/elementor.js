@@ -1,5 +1,5 @@
 //import { removeTrailingSlash } from "./functions";
-const wordPressSiteUrl = 'http://gatsby-wordpress.local' ;//removeTrailingSlash( process.env.GATSBY_WORDPRESS_SITE_URL );
+const wordPressSiteUrl = 'http://b786-3-test.co.uk/gatsbywp' ;//removeTrailingSlash( process.env.GATSBY_WORDPRESS_SITE_URL );
 
 /**
  * Get Elementor CSS Links data
